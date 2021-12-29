@@ -15,12 +15,17 @@
       <div class="product-display">
         <div class="product-container">
           <div class="product-image">
-            <!-- image goes here -->
+            <img :src="image">
           </div>
           <div class="product-info">
             <h1>{{ product }}</h1>
           </div>
         </div>
+      </div>
+      <div>
+        <p>
+          <a :href="url">Lectionary Pages</a>
+        </p>
       </div>
     </div>
 

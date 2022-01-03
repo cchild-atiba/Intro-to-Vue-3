@@ -2,18 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue Mastery</title>
     <!-- Import Styles -->
     <link rel="stylesheet" href="./assets/styles.css" />
     <!-- Import Vue.js -->
-    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"
+      integrity="sha512-1gHWIGJfX0pBsPJHfyoAV4NiZ0wjjE1regXVSwglTejjna0/x/XG8tg+i3ZAsDtuci24LLxW8azhp1+VYE5daw==" crossorigin="anonymous"></script>
   </head>
   <body>
     <div id="app">
       <div class="nav-bar"></div>
 
-      <div class="cart">Cart({{ cart }})</div>
-      <product-display :premium="premium"></product-display>
+      <div class="cart">Cart({{ cart.length }})</div>
+      <product-display :premium="premium" :cart="cart" @add-to-cart="updateCart" @remove-from-cart="updateCart"></product-display>
     </div>
 
     <!-- Import App -->

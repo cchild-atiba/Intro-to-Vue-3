@@ -52,31 +52,31 @@ app.component('product-display', {
           { id: 2234, color: 'green', image: './assets/images/socks_green.jpg', quantity: 50 },
           { id: 2235, color: 'blue', image: './assets/images/socks_blue.jpg', quantity: 0 },
         ]
-    }
+    };
   },
   methods: {
       addToCart() {
-          this.$emit('add-to-cart', this.variants[this.selectedVariant].id)
+          this.$emit('add-to-cart', this.variants[this.selectedVariant].id);
       },
       updateVariant(index) {
-          this.selectedVariant = index
+          this.selectedVariant = index;
       }
   },
   computed: {
       title() {
-          return this.brand + ' ' + this.product
+          return this.brand + ' ' + this.product;
       },
       image() {
-          return this.variants[this.selectedVariant].image
+          return this.variants[this.selectedVariant].image;
       },
       inStock() {
-          return this.variants[this.selectedVariant].quantity
+          return this.variants[this.selectedVariant].quantity;
       },
       shipping() {
         if (this.premium) {
-          return 'Free'
+          return 'Free';
         }
-        return 2.99
+        return 2.99;
       }
   }
-})
+});

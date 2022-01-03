@@ -2,11 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Vue Mastery</title>
     <!-- Import Styles -->
     <link rel="stylesheet" href="./assets/styles.css" />
     <!-- Import Vue.js -->
-    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"
+      crossorigin="anonymous"
+      integrity="sha512-1gHWIGJfX0pBsPJHfyoAV4NiZ0wjjE1regXVSwglTejjna0/x/XG8tg+i3ZAsDtuci24LLxW8azhp1+VYE5daw=="></script>
   </head>
   <body>
     <div id="app">
@@ -21,6 +24,8 @@
 
     <!-- Import Components -->
     <script src="./components/ProductDisplay.js"></script>
+    <script src="./components/ReviewForm.js"></script>
+    <script src="./components/ReviewList.js"></script>
 
     <!-- Mount App -->
     <script>

@@ -34,7 +34,7 @@ app.component('review-form', {
             review: this.review,
             rating: this.rating
           });
-          resetForm();
+          this.resetForm();
       },
       resetForm() {
           this.name = '';
